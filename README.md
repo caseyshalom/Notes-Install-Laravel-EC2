@@ -43,6 +43,7 @@ sudo -u www-data php artisan key:generate
 
 Buka file .env menggunakan 'sudo nano /var/www/aplikasi-aws/.env', lalu sesuaikan kredensial RDS MySQL dan S3 yang sudah Anda buat pada tahap sebelumnya:
 
+```bash
 APP_ENV=production
 APP_DEBUG=false
 APP_URL=http://<PUBLIC_IP_EC2_ANDA>
@@ -57,6 +58,7 @@ DB_PASSWORD=<PASSWORD_RDS_ANDA>
 FILESYSTEM_DISK=s3
 AWS_DEFAULT_REGION=<REGION_AWS_ANDA>
 AWS_BUCKET=<NAMA_BUCKET_S3_ANDA>
+```
 
 (Catatan: Biarkan AWS_ACCESS_KEY_ID dan AWS_SECRET_ACCESS_KEY kosong atau hapus barisnya agar Laravel otomatis mengambil kredensial sementara dari IAM Role yang sudah menempel pada EC2).
 
